@@ -40,6 +40,24 @@ if (!db.prepare('SELECT 1 FROM users WHERE username = ?').get(SEED_USER)) {
   console.log('Seeded admin user:', SEED_USER);
 }
 
+// seed the site content from seed-content.json on a fresh/empty database, so a
+// clean clone shows the real content (texts, images, testimonials). Existing
+// installs are untouched — we only seed when the content table is empty.
+if (db.prepare('SELECT COUNT(*) AS n FROM content').get().n === 0) {
+  const seedFile = path.join(__dirname, 'seed-content.json');
+  if (fs.existsSync(seedFile)) {
+    try {
+      const seed = JSON.parse(fs.readFileSync(seedFile, 'utf8'));
+      const ins = db.prepare('INSERT INTO content (key, value, updated_at) VALUES (?, ?, ?)');
+      const now = Date.now();
+      db.exec('BEGIN');
+      for (const k of Object.keys(seed)) ins.run(k, String(seed[k]), now);
+      db.exec('COMMIT');
+      console.log('Seeded site content:', Object.keys(seed).length, 'entries');
+    } catch (e) { console.warn('content seed skipped:', e.message); }
+  }
+}
+
 /* ---------- app ---------- */
 const app = express();
 app.use(express.json({ limit: '20mb' }));
