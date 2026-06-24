@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# runtime database (contains session tokens + hashed credentials) and logs
+cms.db
+server.log
+
+# uploaded images (runtime content)
+public/uploads/
+
+# OS / editor
+Thumbs.db
+.DS_Store

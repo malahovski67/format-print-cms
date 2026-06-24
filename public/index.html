@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORMAT — סטודיו הדפסה רחבה</title>
+  <meta name="description" content="סטודיו הדפסה דיגיטלית רחבה: באנרים, שילוט, תערוכות ועטיפות רכב באיכות גלריה." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="brand">
+        <span class="brand__dots" aria-hidden="true"><i class="c"></i><i class="m"></i><i class="y"></i><i class="k"></i></span>
+        FORMAT<span class="brand__sub">סטודיו</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#services">שירותים</a>
+        <a href="#work">עבודות</a>
+        <a href="#specs">מפרט</a>
+        <a href="#process">תהליך</a>
+        <a href="#contact" class="nav__cta">בקשת הצעה</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: scroll-scrubbed video -->
+  <section class="hero" id="top">
+    <div class="hero__sticky">
+      <video class="hero__video" id="heroVideo" src="hero-kf.mp4" muted playsinline preload="auto"></video>
+      <div class="hero__scrim"></div>
+
+      <div class="hero__content">
+        <span class="hero__eyebrow">הדפסה דיגיטלית רחבה · משנת 2009</span>
+        <div class="hero__phrases" id="heroPhrases">
+          <h1 class="phrase">ברוכים הבאים</h1>
+          <h1 class="phrase">דפוס אור <em>בתנועה</em></h1>
+          <h1 class="phrase">כל פתרונות הדפוס<br><em>תחת קורת גג אחת</em></h1>
+        </div>
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--solid">קבלת הצעת מחיר</a>
+          <a href="#work" class="btn btn--line">לתיק העבודות</a>
+        </div>
+      </div>
+
+      <!-- print progress readout -->
+      <div class="hero__meter" aria-hidden="true">
+        <div class="hero__meter-bar"><span id="meterFill"></span></div>
+        <div class="hero__meter-label"><span id="meterStatus">גוללו להדפסה</span><span id="meterPct">0%</span></div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
+
+  <!-- ORANGE BAND: image + text -->
+  <section class="orangeband">
+    <div class="container orangeband__row">
+      <figure class="orangeband__media cms-image" data-img-key="band1" style="--img:linear-gradient(150deg,#1bb6c1,#7b1fa2)"></figure>
+      <div class="orangeband__text">
+        <span class="kicker">הסטודיו</span>
+        <h3>מהרעיון אל הדפוס</h3>
+        <p>טקסט לדוגמה — ספרו כאן על השירות, על האיכות או על המבצע. אפשר לערוך את הטקסט ולהעלות תמונה דרך פאנל הניהול.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--video" id="services">
+    <video class="section-bg-video" id="servicesVideo" src="services-bg.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+    <div class="section-bg-scrim"></div>
+    <div class="container">
+      <header class="head">
+        <span class="kicker">השירותים</span>
+        <h2 class="head__title">מה אנחנו מדפיסים</h2>
+        <p class="head__sub">פתרון הדפסה אחד מקצה לקצה — מהקובץ הגולמי ועד ההתקנה באתר.</p>
+      </header>
+      <div class="services">
+        <article class="srv"><figure class="srv__media cms-image" data-img-key="srv1" style="--img:linear-gradient(150deg,#d6357f,#7a1fa2)"></figure><span class="srv__no">01</span><h3>באנרים ורול-אפ</h3><p>הדפסה על PVC, מש ובד דגלים עד רוחב 5 מטר, כולל הלחמה ולולאות.</p></article>
+        <article class="srv"><figure class="srv__media cms-image" data-img-key="srv2" style="--img:linear-gradient(150deg,#1bb6c1,#0b6e9c)"></figure><span class="srv__no">02</span><h3>שילוט קשיח</h3><p>פורקס, אלומיניום, זכוכית ואקריל בחיתוך CNC מדויק לכל צורה.</p></article>
+        <article class="srv"><figure class="srv__media cms-image" data-img-key="srv3" style="--img:linear-gradient(150deg,#f0b429,#e8502e)"></figure><span class="srv__no">03</span><h3>סטנדים לתערוכות</h3><p>קירות נושאים, רולאפים פרימיום וסטים מלאים לדוכן בתערוכה.</p></article>
+        <article class="srv"><figure class="srv__media cms-image" data-img-key="srv4" style="--img:linear-gradient(150deg,#14110d,#4a4136)"></figure><span class="srv__no">04</span><h3>עטיפות רכב</h3><p>Wrap מלא או חלקי בוויניל יצוק עם למינציה מגנה לאורך שנים.</p></article>
+        <article class="srv"><figure class="srv__media cms-image" data-img-key="srv5" style="--img:linear-gradient(150deg,#e8502e,#b3204a)"></figure><span class="srv__no">05</span><h3>הדפסת Fine-Art</h3><p>הדפסת ג'יקלה על נייר כותנה וקנבס בארכיוב 100 שנה.</p></article>
+        <article class="srv"><figure class="srv__media cms-image" data-img-key="srv6" style="--img:linear-gradient(150deg,#2c9e5b,#0c5c3a)"></figure><span class="srv__no">06</span><h3>Backlit ותאורה</h3><p>הדפסות מוארות לקופסאות אור ולחזיתות עם צבע אחיד לאורך כל השטח.</p></article>
+      </div>
+    </div>
+  </section>
+
+<!-- FLOATING IMAGE CUBES -->
+  <section class="floaters" id="showcase">
+    <div class="deals-frame">
+      <div class="container">
+        <header class="head">
+          <span class="kicker kicker--accent">מוגבל בזמן</span>
+          <h2 class="head__title">מבצעי החודש</h2>
+        </header>
+        <div class="floaters__grid">
+          <figure class="floater" data-range="80" style="--img:linear-gradient(150deg,#d6357f,#7a1fa2)">
+            <span class="floater__tag">פוסטרים</span>
+            <figcaption><b>הדפסה בגדול</b><span>עד 5 מטר רוחב</span></figcaption>
+          </figure>
+          <figure class="floater" data-range="130" style="--img:linear-gradient(150deg,#1bb6c1,#0b6e9c)">
+            <span class="floater__tag">שילוט</span>
+            <figcaption><b>חוצות וחזיתות</b><span>חומרים עמידי חוץ</span></figcaption>
+          </figure>
+          <figure class="floater" data-range="80" style="--img:linear-gradient(150deg,#f0b429,#e8502e)">
+            <span class="floater__tag">צבע</span>
+            <figcaption><b>דיוק גלריה</b><span>כיול ICC מלא</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stat"><figure class="stat__icon stat__icon--1 cms-image" data-img-key="stat1" aria-hidden="true"></figure><span class="stat__num" data-count="14000" data-suffix="+">0</span><span class="stat__label">עבודות בשנה</span></div>
+      <div class="stat"><figure class="stat__icon stat__icon--2 cms-image" data-img-key="stat2" aria-hidden="true"></figure><span class="stat__num" data-count="500" data-suffix=" ס״מ">0</span><span class="stat__label">רוחב הדפסה מרבי</span></div>
+      <div class="stat"><figure class="stat__icon stat__icon--3 cms-image" data-img-key="stat3" aria-hidden="true"></figure><span class="stat__num" data-count="1200" data-suffix=" dpi">0</span><span class="stat__label">רזולוציית הדפסה</span></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <div class="container">
+      <header class="head">
+        <span class="kicker">תיק עבודות</span>
+        <h2 class="head__title">נבחרת מהדפוס</h2>
+      </header>
+      <div class="work">
+        <figure class="work__item work__item--tall cms-image" data-img-key="work1" style="--img:linear-gradient(135deg,#d6357f,#7a1fa2)"><figcaption><b>קמפיין חוצות</b><span>באנר מש 6×3 מ׳</span></figcaption></figure>
+        <figure class="work__item cms-image" data-img-key="work2" style="--img:linear-gradient(135deg,#1bb6c1,#0b6e9c)"><figcaption><b>דוכן תערוכה</b><span>סטנד מודולרי</span></figcaption></figure>
+        <figure class="work__item cms-image" data-img-key="work3" style="--img:linear-gradient(135deg,#14110d,#4a4136)"><figcaption><b>עטיפת רכב</b><span>ויניל יצוק מלא</span></figcaption></figure>
+        <figure class="work__item cms-image" data-img-key="work4" style="--img:linear-gradient(135deg,#f0b429,#e8502e)"><figcaption><b>שילוט חזית</b><span>אותיות תלת-ממד</span></figcaption></figure>
+        <figure class="work__item work__item--wide cms-image" data-img-key="work5" style="--img:linear-gradient(135deg,#e8502e,#b3204a)"><figcaption><b>גלריית Fine-Art</b><span>ג'יקלה על קנבס</span></figcaption></figure>
+        <figure class="work__item cms-image" data-img-key="work6" style="--img:linear-gradient(135deg,#2c9e5b,#0c5c3a)"><figcaption><b>קופסת אור</b><span>Backlit מואר</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section--soft" id="testimonials">
+    <div class="container">
+      <header class="head">
+        <span class="kicker">לקוחות</span>
+        <h2 class="head__title">מי שכבר הדפיס איתנו</h2>
+      </header>
+      <div class="quotes" id="quotesBox">
+        <blockquote class="quote"><p>"באנר של 6 מטר היה תלוי תוך יומיים, צבע מושלם. הפכו אותנו ללקוח קבוע."</p><footer><b>רותם בן-דוד</b> · מנהל אירועים, גלובוס</footer></blockquote>
+        <blockquote class="quote"><p>"עטיפת הצי שלנו נראית כמו מהמפעל. הדיוק והגימור פשוט אחרים."</p><footer><b>שירה כספי</b> · מנהלת לוגיסטיקה, פרש-קו</footer></blockquote>
+        <blockquote class="quote"><p>"הדפסות ה-Fine-Art לתערוכה קיבלו מחמאות מכל מבקר. רמת גלריה אמיתית."</p><footer><b>יונתן אדרי</b> · אוצר, מוזיאון העיר</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container cta__grid">
+      <div class="cta__text">
+        <span class="kicker kicker--accent">בואו נדפיס</span>
+        <h2>יש לכם קובץ? יש לנו דיו.</h2>
+        <p>שלחו פרטים ונחזור עם הצעת מחיר מסודרת תוך שעת עבודה.</p>
+        <ul class="cta__list">
+          <li>רחוב הדפוס 12, אזה״ת תל אביב</li>
+          <li>03-555-0123 · hello@format.studio</li>
+          <li>א׳–ה׳ 08:00–18:00</li>
+        </ul>
+      </div>
+      <form class="cta__form" onsubmit="return false;">
+        <input type="text" placeholder="שם מלא" required />
+        <input type="email" placeholder="אימייל" required />
+        <input type="tel" placeholder="טלפון" />
+        <select>
+          <option value="">סוג העבודה…</option>
+          <option>באנר / שילוט</option>
+          <option>תערוכה / סטנד</option>
+          <option>עטיפת רכב</option>
+          <option>Fine-Art</option>
+          <option>אחר</option>
+        </select>
+        <textarea placeholder="ספרו לנו על הפרויקט" rows="3"></textarea>
+        <button class="btn btn--solid" type="submit">שליחת בקשה</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a href="#top" class="brand brand--light">
+          <span class="brand__dots" aria-hidden="true"><i class="c"></i><i class="m"></i><i class="y"></i><i class="k"></i></span>
+          FORMAT<span class="brand__sub">סטודיו</span>
+        </a>
+        <p>סטודיו הדפסה דיגיטלית רחבה. צבע מדויק, חומרים נבחרים, גודל בלי פשרות.</p>
+      </div>
+      <div class="footer__nav">
+        <div><h4>שירותים</h4><a href="#services">באנרים</a><a href="#services">שילוט</a><a href="#services">עטיפות רכב</a><a href="#services">Fine-Art</a></div>
+        <div><h4>סטודיו</h4><a href="#work">עבודות</a><a href="#specs">מפרט</a><a href="#process">תהליך</a></div>
+        <div><h4>קשר</h4><a href="tel:+97235550123">03-555-0123</a><a href="mailto:hello@format.studio">hello@format.studio</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom container">© 2026 FORMAT סטודיו · כל הזכויות שמורות</div>
+  </footer>
+
+  <!-- floating WhatsApp button -->
+  <a href="https://wa.me/972525229120?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D" class="wa-float" target="_blank" rel="noopener" aria-label="צ׳אט בוואטסאפ">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2 7.7L.5 31.5l8-2.1c2.2 1.2 4.8 1.9 7.5 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.2 5.9-13 13-13s13 5.8 13 13-5.8 13-13 13zm7.1-9.7c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-2.3-1.1-3.8-2-5.3-4.6-.4-.7.4-.6 1.1-2.1.1-.2 0-.4 0-.6 0-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 1 4.1.9.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
